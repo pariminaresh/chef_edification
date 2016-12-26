@@ -1,0 +1,372 @@
+vagrant@default-ubuntu-1404-custom:~$ knife vault update ge_acl acl_user -S 'chef_environment:_default' -A mike -M client -VV
+INFO: Using configuration from /home/vagrant/.chef/knife.rb
+DEBUG: Chef::HTTP calling Chef::HTTP::JSONInput#handle_request
+DEBUG: Chef::HTTP calling Chef::HTTP::JSONOutput#handle_request
+DEBUG: Chef::HTTP calling Chef::HTTP::CookieManager#handle_request
+DEBUG: Chef::HTTP calling Chef::HTTP::Decompressor#handle_request
+DEBUG: Chef::HTTP calling Chef::HTTP::Authenticator#handle_request
+DEBUG: Signing the request as nparimi
+DEBUG: Chef::HTTP calling Chef::HTTP::RemoteRequestID#handle_request
+DEBUG: Chef::HTTP calling Chef::HTTP::ValidateContentLength#handle_request
+DEBUG: Initiating GET to https://default-chef-server-headway/organizations/ge_ec/data/ge_acl/acl_user_keys
+DEBUG: ---- HTTP Request Header Data: ----
+DEBUG: Accept: application/json
+DEBUG: Accept-Encoding: gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+DEBUG: X-Ops-Server-API-Version: 1
+DEBUG: X-OPS-SIGN: algorithm=sha1;version=1.1;
+DEBUG: X-OPS-USERID: nparimi
+DEBUG: X-OPS-TIMESTAMP: 2016-11-30T20:38:15Z
+DEBUG: X-OPS-CONTENT-HASH: 2jmj7l5rSw0yVb/vlWAYkK/YBwk=
+DEBUG: X-OPS-AUTHORIZATION-1: B0AlXVHN8c4TKSsZ+L67L0bHzTlwLbQW8fuomtLqGSh2VKMSn8UbOMwDD0rZ
+DEBUG: X-OPS-AUTHORIZATION-2: CHPe3YoV04BHB+MICaJeBjx3YS+4zH8JjZWkGcRqmLj7pFPoJZK2Pmay6Cxi
+DEBUG: X-OPS-AUTHORIZATION-3: 9PKP4cLrq6WPIAIrFcGjz7TiElnmqfYNLy6OCbQjbQwzDQaNJIud3cK9agn2
+DEBUG: X-OPS-AUTHORIZATION-4: i0eWOUsOu8JW6ukoD5WVF9JUOj4IDLLSTzmh4OPE9QR5TloW6pPYEdD+VuJv
+DEBUG: X-OPS-AUTHORIZATION-5: yX39d+7laAJAVMJNiGmsE8V1dtc/LKkydSdOp+cRvMv5z4EGT3Y2Nq+ElM4U
+DEBUG: X-OPS-AUTHORIZATION-6: zyS7fWrvThk87wcH3h03vnZwCTWq4tXYSjx2/nQJTw==
+DEBUG: HOST: default-chef-server-headway:443
+DEBUG: X-REMOTE-REQUEST-ID: 26a7bf5d-a53f-4bf7-b3c1-4be253d6726d
+DEBUG: ---- End HTTP Request Header Data ----
+DEBUG: ---- HTTP Status and Header Data: ----
+DEBUG: HTTP 1.1 200 OK
+DEBUG: server: openresty/1.11.2.1
+DEBUG: date: Wed, 30 Nov 2016 20:38:15 GMT
+DEBUG: content-type: application/json
+DEBUG: transfer-encoding: chunked
+DEBUG: connection: close
+DEBUG: x-ops-server-api-version: {"min_version":"0","max_version":"1","request_version":"1","response_version":"1"}
+DEBUG: x-ops-api-info: flavor=cs;version=12.0.0;oc_erchef=12.10.0
+DEBUG: content-encoding: gzip
+DEBUG: ---- End HTTP Status/Header Data ----
+DEBUG: Chef::HTTP calling Chef::HTTP::ValidateContentLength#handle_response
+DEBUG: HTTP server did not include a Content-Length header in response, cannot identify truncated downloads.
+DEBUG: Chef::HTTP calling Chef::HTTP::RemoteRequestID#handle_response
+DEBUG: Chef::HTTP calling Chef::HTTP::Authenticator#handle_response
+DEBUG: Chef::HTTP calling Chef::HTTP::Decompressor#handle_response
+DEBUG: Decompressing gzip response
+DEBUG: Chef::HTTP calling Chef::HTTP::CookieManager#handle_response
+DEBUG: Chef::HTTP calling Chef::HTTP::JSONOutput#handle_response
+DEBUG: Chef::HTTP calling Chef::HTTP::JSONInput#handle_response
+DEBUG: Chef::HTTP calling Chef::HTTP::JSONInput#handle_request
+DEBUG: Chef::HTTP calling Chef::HTTP::JSONOutput#handle_request
+DEBUG: Chef::HTTP calling Chef::HTTP::CookieManager#handle_request
+DEBUG: Chef::HTTP calling Chef::HTTP::Decompressor#handle_request
+DEBUG: Chef::HTTP calling Chef::HTTP::Authenticator#handle_request
+DEBUG: Signing the request as nparimi
+DEBUG: Chef::HTTP calling Chef::HTTP::RemoteRequestID#handle_request
+DEBUG: Chef::HTTP calling Chef::HTTP::ValidateContentLength#handle_request
+DEBUG: Initiating GET to https://default-chef-server-headway/organizations/ge_ec/data/ge_acl/acl_user
+DEBUG: ---- HTTP Request Header Data: ----
+DEBUG: Accept: application/json
+DEBUG: Accept-Encoding: gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+DEBUG: X-Ops-Server-API-Version: 1
+DEBUG: X-OPS-SIGN: algorithm=sha1;version=1.1;
+DEBUG: X-OPS-USERID: nparimi
+DEBUG: X-OPS-TIMESTAMP: 2016-11-30T20:38:15Z
+DEBUG: X-OPS-CONTENT-HASH: 2jmj7l5rSw0yVb/vlWAYkK/YBwk=
+DEBUG: X-OPS-AUTHORIZATION-1: NFmBSiibzLPho44Hv0ezMzmexL4WWmA+vagkvMwRSp7QCaheXmYd72ijCKgP
+DEBUG: X-OPS-AUTHORIZATION-2: /Tx1cm0rFU2Gnke9vpIHT/bhbm+AWwzEyuT4U5No2Ff7l/k4YwSBumdaeyo5
+DEBUG: X-OPS-AUTHORIZATION-3: wfJDytE6pgYLcRRiKXvCx3ia7rl1XubruNvvEvFK5pqbaUK/YEt2RMKyFq6E
+DEBUG: X-OPS-AUTHORIZATION-4: bn3KlEK3Ohv2JMadMb3a/Scec6YPNuGqNmU2bd4jfIVV2qzp/rhSuagPMtFp
+DEBUG: X-OPS-AUTHORIZATION-5: upRFUSUysyr9NqwwzxNS5gr3KIKrg+8lJ/BkLDwar4gv2B3utkwyKiguNfDb
+DEBUG: X-OPS-AUTHORIZATION-6: h9Lm8Eq1ZqBWH9kJ52D8omUa4i++BADdhsZO+H67oQ==
+DEBUG: HOST: default-chef-server-headway:443
+DEBUG: X-REMOTE-REQUEST-ID: 26a7bf5d-a53f-4bf7-b3c1-4be253d6726d
+DEBUG: ---- End HTTP Request Header Data ----
+DEBUG: ---- HTTP Status and Header Data: ----
+DEBUG: HTTP 1.1 200 OK
+DEBUG: server: openresty/1.11.2.1
+DEBUG: date: Wed, 30 Nov 2016 20:38:15 GMT
+DEBUG: content-type: application/json
+DEBUG: transfer-encoding: chunked
+DEBUG: connection: close
+DEBUG: x-ops-server-api-version: {"min_version":"0","max_version":"1","request_version":"1","response_version":"1"}
+DEBUG: x-ops-api-info: flavor=cs;version=12.0.0;oc_erchef=12.10.0
+DEBUG: content-encoding: gzip
+DEBUG: ---- End HTTP Status/Header Data ----
+DEBUG: Chef::HTTP calling Chef::HTTP::ValidateContentLength#handle_response
+DEBUG: HTTP server did not include a Content-Length header in response, cannot identify truncated downloads.
+DEBUG: Chef::HTTP calling Chef::HTTP::RemoteRequestID#handle_response
+DEBUG: Chef::HTTP calling Chef::HTTP::Authenticator#handle_response
+DEBUG: Chef::HTTP calling Chef::HTTP::Decompressor#handle_response
+DEBUG: Decompressing gzip response
+DEBUG: Chef::HTTP calling Chef::HTTP::CookieManager#handle_response
+DEBUG: Chef::HTTP calling Chef::HTTP::JSONOutput#handle_response
+DEBUG: Chef::HTTP calling Chef::HTTP::JSONInput#handle_response
+DEBUG: Chef::HTTP calling Chef::HTTP::JSONInput#handle_request
+DEBUG: Chef::HTTP calling Chef::HTTP::JSONOutput#handle_request
+DEBUG: Chef::HTTP calling Chef::HTTP::CookieManager#handle_request
+DEBUG: Chef::HTTP calling Chef::HTTP::Decompressor#handle_request
+DEBUG: Chef::HTTP calling Chef::HTTP::Authenticator#handle_request
+DEBUG: Signing the request as nparimi
+DEBUG: Chef::HTTP calling Chef::HTTP::RemoteRequestID#handle_request
+DEBUG: Chef::HTTP calling Chef::HTTP::ValidateContentLength#handle_request
+DEBUG: Initiating GET to https://default-chef-server-headway/organizations/ge_ec/search/node?q=chef_environment:_default&sort=X_CHEF_id_CHEF_X%20asc&start=0
+DEBUG: ---- HTTP Request Header Data: ----
+DEBUG: Accept: application/json
+DEBUG: Accept-Encoding: gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+DEBUG: X-Ops-Server-API-Version: 1
+DEBUG: X-OPS-SIGN: algorithm=sha1;version=1.1;
+DEBUG: X-OPS-USERID: nparimi
+DEBUG: X-OPS-TIMESTAMP: 2016-11-30T20:38:15Z
+DEBUG: X-OPS-CONTENT-HASH: 2jmj7l5rSw0yVb/vlWAYkK/YBwk=
+DEBUG: X-OPS-AUTHORIZATION-1: M62iRjbjQovSjaGgOWRbuRj2FjCtbC1PlP6aZcZuqNCCvcontBzqojEMBwnQ
+DEBUG: X-OPS-AUTHORIZATION-2: hcdHWPZ1yx7ZGKMgiBoq0W25ZigfOEwfFr8otYr9WSVVMKX00FAQbNQ6lAlu
+DEBUG: X-OPS-AUTHORIZATION-3: KJeA7N/YF5mrbwTBSEh6XzW77nOeuy8P78dg5iBYlaJFK1toQuRfrw7SXa/1
+DEBUG: X-OPS-AUTHORIZATION-4: 3Gtza3eoJbFwgryHc6s0t9UKCL+yu13ZvhNPlvIGVY5BKslevy/W1vd2B8PQ
+DEBUG: X-OPS-AUTHORIZATION-5: zl9PszQAVRC7eb+Z0LUGxeV5e3mWAEHT3DpPgjq2XAIBaJSRFrA951hOaRz5
+DEBUG: X-OPS-AUTHORIZATION-6: +/b+zstH3N9tfS5qLNWY0w41hC2n5fGxtonD3tFdyw==
+DEBUG: HOST: default-chef-server-headway:443
+DEBUG: X-REMOTE-REQUEST-ID: 26a7bf5d-a53f-4bf7-b3c1-4be253d6726d
+DEBUG: ---- End HTTP Request Header Data ----
+DEBUG: ---- HTTP Status and Header Data: ----
+DEBUG: HTTP 1.1 200 OK
+DEBUG: server: openresty/1.11.2.1
+DEBUG: date: Wed, 30 Nov 2016 20:38:15 GMT
+DEBUG: content-type: application/json
+DEBUG: transfer-encoding: chunked
+DEBUG: connection: close
+DEBUG: x-ops-server-api-version: {"min_version":"0","max_version":"1","request_version":"1","response_version":"1"}
+DEBUG: x-ops-api-info: flavor=cs;version=12.0.0;oc_erchef=12.10.0
+DEBUG: content-encoding: gzip
+DEBUG: ---- End HTTP Status/Header Data ----
+DEBUG: Chef::HTTP calling Chef::HTTP::ValidateContentLength#handle_response
+DEBUG: HTTP server did not include a Content-Length header in response, cannot identify truncated downloads.
+DEBUG: Chef::HTTP calling Chef::HTTP::RemoteRequestID#handle_response
+DEBUG: Chef::HTTP calling Chef::HTTP::Authenticator#handle_response
+DEBUG: Chef::HTTP calling Chef::HTTP::Decompressor#handle_response
+DEBUG: Decompressing gzip response
+DEBUG: Chef::HTTP calling Chef::HTTP::CookieManager#handle_response
+DEBUG: Chef::HTTP calling Chef::HTTP::JSONOutput#handle_response
+DEBUG: Chef::HTTP calling Chef::HTTP::JSONInput#handle_response
+DEBUG: Chef::HTTP calling Chef::HTTP::JSONInput#handle_request
+DEBUG: Chef::HTTP calling Chef::HTTP::JSONOutput#handle_request
+DEBUG: Chef::HTTP calling Chef::HTTP::CookieManager#handle_request
+DEBUG: Chef::HTTP calling Chef::HTTP::Decompressor#handle_request
+DEBUG: Chef::HTTP calling Chef::HTTP::Authenticator#handle_request
+DEBUG: Signing the request as nparimi
+DEBUG: Chef::HTTP calling Chef::HTTP::RemoteRequestID#handle_request
+DEBUG: Chef::HTTP calling Chef::HTTP::ValidateContentLength#handle_request
+DEBUG: Initiating GET to https://default-chef-server-headway/organizations/ge_ec/clients/test2
+DEBUG: ---- HTTP Request Header Data: ----
+DEBUG: Accept: application/json
+DEBUG: Accept-Encoding: gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+DEBUG: X-Ops-Server-API-Version: 0
+DEBUG: X-OPS-SIGN: algorithm=sha1;version=1.1;
+DEBUG: X-OPS-USERID: nparimi
+DEBUG: X-OPS-TIMESTAMP: 2016-11-30T20:38:15Z
+DEBUG: X-OPS-CONTENT-HASH: 2jmj7l5rSw0yVb/vlWAYkK/YBwk=
+DEBUG: X-OPS-AUTHORIZATION-1: KQ280PSABAOuhBFuGlz8h/1Coa/qSzLUuL0uITJ0nJKfEG+vDeQJYa4BlXhU
+DEBUG: X-OPS-AUTHORIZATION-2: abcW3TMKbx2L0TXgpSrN99w2tGx4L6d9LIWTqvDgs6PM8WkDy6nvKf831c9N
+DEBUG: X-OPS-AUTHORIZATION-3: rGQpxsJwXq9OBE1vGJhisecBPRULevNmgt+90AsZhPFB4bPFeGXtQXBsW5HE
+DEBUG: X-OPS-AUTHORIZATION-4: yeTcHCgAwL5XQH6IgMffvu5rPVbg6oGOugiSTlaRw+855qR1U0Qyj/NUGUyV
+DEBUG: X-OPS-AUTHORIZATION-5: pNVlWTKnQiivZw/Lyis0VF3WgYHn4FkxYvN30v68mun/6zyU+0gmjwesZacl
+DEBUG: X-OPS-AUTHORIZATION-6: A3zeicSbuMZ1US7HLiCzaesdUbCMDNGEV+TeFDcr4Q==
+DEBUG: HOST: default-chef-server-headway:443
+DEBUG: X-REMOTE-REQUEST-ID: 26a7bf5d-a53f-4bf7-b3c1-4be253d6726d
+DEBUG: ---- End HTTP Request Header Data ----
+DEBUG: ---- HTTP Status and Header Data: ----
+DEBUG: HTTP 1.1 200 OK
+DEBUG: server: openresty/1.11.2.1
+DEBUG: date: Wed, 30 Nov 2016 20:38:15 GMT
+DEBUG: content-type: application/json
+DEBUG: transfer-encoding: chunked
+DEBUG: connection: close
+DEBUG: x-ops-server-api-version: {"min_version":"0","max_version":"1","request_version":"0","response_version":"0"}
+DEBUG: x-ops-api-info: flavor=cs;version=12.0.0;oc_erchef=12.10.0
+DEBUG: content-encoding: gzip
+DEBUG: ---- End HTTP Status/Header Data ----
+DEBUG: Chef::HTTP calling Chef::HTTP::ValidateContentLength#handle_response
+DEBUG: HTTP server did not include a Content-Length header in response, cannot identify truncated downloads.
+DEBUG: Chef::HTTP calling Chef::HTTP::RemoteRequestID#handle_response
+DEBUG: Chef::HTTP calling Chef::HTTP::Authenticator#handle_response
+DEBUG: Chef::HTTP calling Chef::HTTP::Decompressor#handle_response
+DEBUG: Decompressing gzip response
+DEBUG: Chef::HTTP calling Chef::HTTP::CookieManager#handle_response
+DEBUG: Chef::HTTP calling Chef::HTTP::JSONOutput#handle_response
+DEBUG: Chef::HTTP calling Chef::HTTP::JSONInput#handle_response
+DEBUG: Chef::HTTP calling Chef::HTTP::JSONInput#handle_request
+DEBUG: Chef::HTTP calling Chef::HTTP::JSONOutput#handle_request
+DEBUG: Chef::HTTP calling Chef::HTTP::CookieManager#handle_request
+DEBUG: Chef::HTTP calling Chef::HTTP::Decompressor#handle_request
+DEBUG: Chef::HTTP calling Chef::HTTP::Authenticator#handle_request
+DEBUG: Signing the request as nparimi
+DEBUG: Chef::HTTP calling Chef::HTTP::RemoteRequestID#handle_request
+DEBUG: Chef::HTTP calling Chef::HTTP::ValidateContentLength#handle_request
+DEBUG: Initiating GET to https://default-chef-server-headway/organizations/ge_ec/users/nparimi
+DEBUG: ---- HTTP Request Header Data: ----
+DEBUG: Accept: application/json
+DEBUG: Accept-Encoding: gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+DEBUG: X-Ops-Server-API-Version: 0
+DEBUG: X-OPS-SIGN: algorithm=sha1;version=1.1;
+DEBUG: X-OPS-USERID: nparimi
+DEBUG: X-OPS-TIMESTAMP: 2016-11-30T20:38:15Z
+DEBUG: X-OPS-CONTENT-HASH: 2jmj7l5rSw0yVb/vlWAYkK/YBwk=
+DEBUG: X-OPS-AUTHORIZATION-1: ammqD3Tkzge6IWzUnX+bMPh6Ouaxm62oATAJxn2lOXNdS5iK+UsNCo0puoKV
+DEBUG: X-OPS-AUTHORIZATION-2: K1+ZtSkLcFxYkbWse7/AK0Zqi2hhMD/YQi1sCNHcIdxgdVRleGxpKACmmHZC
+DEBUG: X-OPS-AUTHORIZATION-3: KUPld/BicwO26JJg7kr4E3qQtt0An0j4E8BBGtQNZIwt4E4VZmj0JWWWgECa
+DEBUG: X-OPS-AUTHORIZATION-4: VTT/sFVJrAy9lif0z6UANGk/0wqVyBxOuAgatVYYH3rK1+7XmwvfufLqe0kz
+DEBUG: X-OPS-AUTHORIZATION-5: rdtIsQ4ZwYIrL8IvdQx37f3Xqd6mVc7b71CT/d08nWjlzWAvvY8NTTF4Msle
+DEBUG: X-OPS-AUTHORIZATION-6: NmoX9x0TAPOHCmm0GpJkTMwIh09/HM7iQbvayg//xg==
+DEBUG: HOST: default-chef-server-headway:443
+DEBUG: X-REMOTE-REQUEST-ID: 26a7bf5d-a53f-4bf7-b3c1-4be253d6726d
+DEBUG: ---- End HTTP Request Header Data ----
+DEBUG: ---- HTTP Status and Header Data: ----
+DEBUG: HTTP 1.1 200 OK
+DEBUG: server: openresty/1.11.2.1
+DEBUG: date: Wed, 30 Nov 2016 20:38:15 GMT
+DEBUG: content-type: application/json
+DEBUG: transfer-encoding: chunked
+DEBUG: connection: close
+DEBUG: x-ops-server-api-version: {"min_version":"0","max_version":"1","request_version":"0","response_version":"0"}
+DEBUG: x-ops-api-info: flavor=cs;version=12.0.0;oc_erchef=12.10.0
+DEBUG: content-encoding: gzip
+DEBUG: ---- End HTTP Status/Header Data ----
+DEBUG: Chef::HTTP calling Chef::HTTP::ValidateContentLength#handle_response
+DEBUG: HTTP server did not include a Content-Length header in response, cannot identify truncated downloads.
+DEBUG: Chef::HTTP calling Chef::HTTP::RemoteRequestID#handle_response
+DEBUG: Chef::HTTP calling Chef::HTTP::Authenticator#handle_response
+DEBUG: Chef::HTTP calling Chef::HTTP::Decompressor#handle_response
+DEBUG: Decompressing gzip response
+DEBUG: Chef::HTTP calling Chef::HTTP::CookieManager#handle_response
+DEBUG: Chef::HTTP calling Chef::HTTP::JSONOutput#handle_response
+DEBUG: Chef::HTTP calling Chef::HTTP::JSONInput#handle_response
+DEBUG: Chef::HTTP calling Chef::HTTP::JSONInput#handle_request
+DEBUG: Chef::HTTP calling Chef::HTTP::JSONOutput#handle_request
+DEBUG: Chef::HTTP calling Chef::HTTP::CookieManager#handle_request
+DEBUG: Chef::HTTP calling Chef::HTTP::Decompressor#handle_request
+DEBUG: Chef::HTTP calling Chef::HTTP::Authenticator#handle_request
+DEBUG: Signing the request as nparimi
+DEBUG: Chef::HTTP calling Chef::HTTP::RemoteRequestID#handle_request
+DEBUG: Chef::HTTP calling Chef::HTTP::ValidateContentLength#handle_request
+DEBUG: Initiating GET to https://default-chef-server-headway/organizations/ge_ec/users/mike
+DEBUG: ---- HTTP Request Header Data: ----
+DEBUG: Accept: application/json
+DEBUG: Accept-Encoding: gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+DEBUG: X-Ops-Server-API-Version: 0
+DEBUG: X-OPS-SIGN: algorithm=sha1;version=1.1;
+DEBUG: X-OPS-USERID: nparimi
+DEBUG: X-OPS-TIMESTAMP: 2016-11-30T20:38:15Z
+DEBUG: X-OPS-CONTENT-HASH: 2jmj7l5rSw0yVb/vlWAYkK/YBwk=
+DEBUG: X-OPS-AUTHORIZATION-1: kgGVbk8YAbpG3fP5mqqC7oVF5gx1JD5bDa+b6IV/DKq1I/ko5LTV2Av6YVRM
+DEBUG: X-OPS-AUTHORIZATION-2: 5jI7guj1tIxr+yy/HRZggIZ2Bjb8FPloieaWE/o+OUbefqzuqh3Shd917SWl
+DEBUG: X-OPS-AUTHORIZATION-3: ViAWKanb9n3x699sVs3TV82s4DAWEPexsnE0i/ZFgzQzJqsArFg3unaQL1FJ
+DEBUG: X-OPS-AUTHORIZATION-4: ODJvQyb2RMWt47hiiLvG/jtJIm9wKmJCxrQgbeEPtDl+BEJ0MnAcndcw5GsE
+DEBUG: X-OPS-AUTHORIZATION-5: 8xoMdibiRmImF7LZwTlZoT/zyXBhAChz4eeUgdOzvoi6XfwJCuAL7eD4UbOm
+DEBUG: X-OPS-AUTHORIZATION-6: 757VfPdWKCQ8vou3vl9Cp+nYvHnuWm2OP0fZyIxiBQ==
+DEBUG: HOST: default-chef-server-headway:443
+DEBUG: X-REMOTE-REQUEST-ID: 26a7bf5d-a53f-4bf7-b3c1-4be253d6726d
+DEBUG: ---- End HTTP Request Header Data ----
+DEBUG: ---- HTTP Status and Header Data: ----
+DEBUG: HTTP 1.1 200 OK
+DEBUG: server: openresty/1.11.2.1
+DEBUG: date: Wed, 30 Nov 2016 20:38:15 GMT
+DEBUG: content-type: application/json
+DEBUG: transfer-encoding: chunked
+DEBUG: connection: close
+DEBUG: x-ops-server-api-version: {"min_version":"0","max_version":"1","request_version":"0","response_version":"0"}
+DEBUG: x-ops-api-info: flavor=cs;version=12.0.0;oc_erchef=12.10.0
+DEBUG: content-encoding: gzip
+DEBUG: ---- End HTTP Status/Header Data ----
+DEBUG: Chef::HTTP calling Chef::HTTP::ValidateContentLength#handle_response
+DEBUG: HTTP server did not include a Content-Length header in response, cannot identify truncated downloads.
+DEBUG: Chef::HTTP calling Chef::HTTP::RemoteRequestID#handle_response
+DEBUG: Chef::HTTP calling Chef::HTTP::Authenticator#handle_response
+DEBUG: Chef::HTTP calling Chef::HTTP::Decompressor#handle_response
+DEBUG: Decompressing gzip response
+DEBUG: Chef::HTTP calling Chef::HTTP::CookieManager#handle_response
+DEBUG: Chef::HTTP calling Chef::HTTP::JSONOutput#handle_response
+DEBUG: Chef::HTTP calling Chef::HTTP::JSONInput#handle_response
+DEBUG: Chef::HTTP calling Chef::HTTP::JSONInput#handle_request
+DEBUG: Chef::HTTP calling Chef::HTTP::JSONOutput#handle_request
+DEBUG: Chef::HTTP calling Chef::HTTP::CookieManager#handle_request
+DEBUG: Chef::HTTP calling Chef::HTTP::Decompressor#handle_request
+DEBUG: Chef::HTTP calling Chef::HTTP::Authenticator#handle_request
+DEBUG: Signing the request as nparimi
+DEBUG: Chef::HTTP calling Chef::HTTP::RemoteRequestID#handle_request
+DEBUG: Chef::HTTP calling Chef::HTTP::ValidateContentLength#handle_request
+DEBUG: Initiating GET to https://default-chef-server-headway/organizations/ge_ec/data/ge_acl
+DEBUG: ---- HTTP Request Header Data: ----
+DEBUG: Accept: application/json
+DEBUG: Accept-Encoding: gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+DEBUG: X-Ops-Server-API-Version: 1
+DEBUG: X-OPS-SIGN: algorithm=sha1;version=1.1;
+DEBUG: X-OPS-USERID: nparimi
+DEBUG: X-OPS-TIMESTAMP: 2016-11-30T20:38:15Z
+DEBUG: X-OPS-CONTENT-HASH: 2jmj7l5rSw0yVb/vlWAYkK/YBwk=
+DEBUG: X-OPS-AUTHORIZATION-1: iIvp4M66YGIuYnaFpwk5FuRM7nf/GETzJfZZUOYzfiVlFQ5O9h1n/VrpjtHo
+DEBUG: X-OPS-AUTHORIZATION-2: K3VZS5TpV0D75r9HacZfGT0nH9KTUDKU/7h2KgKcYDwpCfH7s0izGt9CJp/L
+DEBUG: X-OPS-AUTHORIZATION-3: nfkCMa9GQ3RAKhGlOSKLozG3ykyLkBBM/Qx3gzEh9RpD07GhyzcFBZIkScR4
+DEBUG: X-OPS-AUTHORIZATION-4: +x2jE0KbZxJwU9l8WpDgDRph2w1wh4ooGymilWjYq/IQhZW5xPOC1LcJfnuq
+DEBUG: X-OPS-AUTHORIZATION-5: m/32oRsjwTiALN80Fvdey00ifYSgBayTMLMfOvN+V6KPbayB3TGztJTv4F4L
+DEBUG: X-OPS-AUTHORIZATION-6: NzqtB+BIDLy0TxJOMSXutjgjUbujMjX8AW67KpHA+Q==
+DEBUG: HOST: default-chef-server-headway:443
+DEBUG: X-REMOTE-REQUEST-ID: 26a7bf5d-a53f-4bf7-b3c1-4be253d6726d
+DEBUG: ---- End HTTP Request Header Data ----
+DEBUG: ---- HTTP Status and Header Data: ----
+DEBUG: HTTP 1.1 200 OK
+DEBUG: server: openresty/1.11.2.1
+DEBUG: date: Wed, 30 Nov 2016 20:38:15 GMT
+DEBUG: content-type: application/json
+DEBUG: transfer-encoding: chunked
+DEBUG: connection: close
+DEBUG: x-ops-server-api-version: {"min_version":"0","max_version":"1","request_version":"1","response_version":"1"}
+DEBUG: x-ops-api-info: flavor=cs;version=12.0.0;oc_erchef=12.10.0
+DEBUG: content-encoding: gzip
+DEBUG: ---- End HTTP Status/Header Data ----
+DEBUG: Chef::HTTP calling Chef::HTTP::ValidateContentLength#handle_response
+DEBUG: HTTP server did not include a Content-Length header in response, cannot identify truncated downloads.
+DEBUG: Chef::HTTP calling Chef::HTTP::RemoteRequestID#handle_response
+DEBUG: Chef::HTTP calling Chef::HTTP::Authenticator#handle_response
+DEBUG: Chef::HTTP calling Chef::HTTP::Decompressor#handle_response
+DEBUG: Decompressing gzip response
+DEBUG: Chef::HTTP calling Chef::HTTP::CookieManager#handle_response
+DEBUG: Chef::HTTP calling Chef::HTTP::JSONOutput#handle_response
+DEBUG: Chef::HTTP calling Chef::HTTP::JSONInput#handle_response
+DEBUG: Chef::HTTP calling Chef::HTTP::JSONInput#handle_request
+DEBUG: Chef::HTTP calling Chef::HTTP::JSONOutput#handle_request
+DEBUG: Chef::HTTP calling Chef::HTTP::CookieManager#handle_request
+DEBUG: Chef::HTTP calling Chef::HTTP::Decompressor#handle_request
+DEBUG: Chef::HTTP calling Chef::HTTP::Authenticator#handle_request
+DEBUG: Signing the request as nparimi
+DEBUG: Chef::HTTP calling Chef::HTTP::RemoteRequestID#handle_request
+DEBUG: Chef::HTTP calling Chef::HTTP::ValidateContentLength#handle_request
+DEBUG: Initiating PUT to https://default-chef-server-headway/organizations/ge_ec/data/ge_acl/acl_user_keys
+DEBUG: ---- HTTP Request Header Data: ----
+DEBUG: Content-Type: application/json
+DEBUG: Accept: application/json
+DEBUG: Accept-Encoding: gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+DEBUG: X-Ops-Server-API-Version: 1
+DEBUG: X-OPS-SIGN: algorithm=sha1;version=1.1;
+DEBUG: X-OPS-USERID: nparimi
+DEBUG: X-OPS-TIMESTAMP: 2016-11-30T20:38:15Z
+DEBUG: X-OPS-CONTENT-HASH: rgszNlSUZVi0b2GYLK2Rtznvcbo=
+DEBUG: X-OPS-AUTHORIZATION-1: kdj2IRAvoD/JNf2My52ktU5Hv33sFeSuqIhahticN89moSCBowPHMoV2umUZ
+DEBUG: X-OPS-AUTHORIZATION-2: xXMPEHMUqMfTv4TVZIaFgHYKC8ViQVezl/rzMkNkJQm2yjs4j+/pKnTLSiC/
+DEBUG: X-OPS-AUTHORIZATION-3: V4DssaNQYU3nin5FfRDVHPBiJ1SrCr1c80SHQj0ebBrkaLmV7HROr6i90oTf
+DEBUG: X-OPS-AUTHORIZATION-4: 3K+S4q94CTCNB8LTdohoYU7Ob9oahEjCaUl962rLKJayTcuuZOAIucTUtyHi
+DEBUG: X-OPS-AUTHORIZATION-5: VKYIMQ91NnbZNCIKtNj2KK8ls1KuKxO8w94fufHr8so36MU8c1fehJIUxq4g
+DEBUG: X-OPS-AUTHORIZATION-6: lq7+MC6dRcRyHNRD3PilkHWmUQs2RKXkL7suqDs4nQ==
+DEBUG: HOST: default-chef-server-headway:443
+DEBUG: X-REMOTE-REQUEST-ID: 26a7bf5d-a53f-4bf7-b3c1-4be253d6726d
+DEBUG: Content-Length: 2109
+DEBUG: ---- End HTTP Request Header Data ----
+DEBUG: ---- HTTP Status and Header Data: ----
+DEBUG: HTTP 1.1 200 OK
+DEBUG: server: openresty/1.11.2.1
+DEBUG: date: Wed, 30 Nov 2016 20:38:15 GMT
+DEBUG: content-type: application/json
+DEBUG: transfer-encoding: chunked
+DEBUG: connection: close
+DEBUG: x-ops-server-api-version: {"min_version":"0","max_version":"1","request_version":"1","response_version":"1"}
+DEBUG: x-ops-api-info: flavor=cs;version=12.0.0;oc_erchef=12.10.0
+DEBUG: content-encoding: gzip
+DEBUG: ---- End HTTP Status/Header Data ----
+DEBUG: Chef::HTTP calling Chef::HTTP::ValidateContentLength#handle_response
+DEBUG: HTTP server did not include a Content-Length header in response, cannot identify truncated downloads.
+DEBUG: Chef::HTTP calling Chef::HTTP::RemoteRequestID#handle_response
+DEBUG: Chef::HTTP calling Chef::HTTP::Authenticator#handle_response
+DEBUG: Chef::HTTP calling Chef::HTTP::Decompressor#handle_response
+DEBUG: Decompressing gzip response
+DEBUG: Chef::HTTP calling Chef::HTTP::CookieManager#handle_response
+DEBUG: Chef::HTTP calling Chef::HTTP::JSONOutput#handle_response
+DEBUG: Chef::HTTP calling Chef::HTTP::JSONInput#handle_response

@@ -1,0 +1,41 @@
+---
+driver:
+  name: vagrant
+  synced_folders: 
+    - ["/Users/nareshparimi/Documents/Office/chef/personal_chef/server", "/tmp/chef-server"]
+  customize: 
+     memory: 1024
+
+provisioner:
+  name: chef_zero
+  # You may wish to disable always updating cookbooks in CI or other testing environments.
+  # For example:
+  #   always_update_cookbooks: <%= !ENV['CI'] %>
+  #always_update_cookbooks: true
+  #http_proxy: http://iss-americas-pitc-cincinnatiz.proxy.corporate.ge.com:80
+
+verifier:
+  name: inspec
+
+platforms:
+   - name: ubuntu-14.04
+   - name: base-chef-server
+
+suites:
+  - name: default
+    run_list:
+      - recipe[test::default]
+    verifier:
+      inspec_tests:
+        - test/recipes
+    attributes:
+    driver:
+      #vm_hostname: nparimi.chef-server.com
+      customize:
+        memory: 2048
+        cpus: 2
+      network:
+        - ["forwarded_port", {guest: 80, host: 8080}]
+        #- ["forwarded_port", {guest: 443, host: 443, auto_correct: true}]
+        - ["private_network", {ip: "192.168.33.33"}]
+      #gui: true

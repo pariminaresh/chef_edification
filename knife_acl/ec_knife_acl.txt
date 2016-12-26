@@ -1,0 +1,108 @@
+knife group list
+	admins
+	billing-admins
+	clients
+	public_key_read_access
+	users
+
+knife acl add MEMBER_TYPE MEMBER_NAME OBJECT_TYPE OBJECT_NAME PERMS
+knife acl bulk add MEMBER_TYPE MEMBER_NAME OBJECT_TYPE REGEX PERMS
+knife acl bulk remove MEMBER_TYPE MEMBER_NAME OBJECT_TYPE REGEX PERMS
+knife acl remove MEMBER_TYPE MEMBER_NAME OBJECT_TYPE OBJECT_NAME PERMS
+knife acl show OBJECT_TYPE OBJECT_NAME
+knife group add MEMBER_TYPE MEMBER_NAME GROUP_NAME
+knife group create GROUP_NAME
+knife group destroy GROUP_NAME
+knife group list
+knife group remove MEMBER_TYPE MEMBER_NAME GROUP_NAME
+knife group show GROUP_NAME
+knife user dissociate USERNAMES
+knife user invite add USERNAMES
+knife user invite list
+knife user invite recind [USERNAMES] (options)
+------------------
+
+Addning a group to CRUDG ACE of server_object
+
+  e.x: Adding 'read_only' to 'read' ACE of 'prod_env'
+
+1. create a group
+2. add a user to a groupknife acl add group ge_group environments ge_env read,update
+3. objects:
+    - assign group to ACL and to the chef objects
+4.If there are multiple orgs - by default the group create belongs to which org?
+5.
+
+- a user should have only read access for an env called envA
+
+knife acl add groups ge_group environments envA read,update
+
+
+user1 - corp_env1 - read
+user2 - corp_env2 - read
+user3 - both env  - read
+
+
+chef-server-ctl user-create 502636239 Mike Dough mike.dough502636239@ge.com 'Test1234' --filename /tmp/502636239.pem
+chef-server-ctl org-create ge_ec 'GE ExportControls' --association_user nparimi --filename //tmp/ge_ec.pem
+
+  chef-server-ctl user-create 212306882 Alex Vinyar alex.vinyar212306882@ge.com 'Alex1234' --filename /tmp/212306882.pem
+  chef-server-ctl org-user-add ge_ec 212306882
+
+chef-server-ctl user-create smith Smith John smith.john@ge.com 'John1234' --filename /tmp/johns.pem
+chef-server-ctl org-user-add ge_ec smith
+
+chef-server-ctl user-create ick Ick Jockson ick.jockson@ge.com 'Test1234' --filename /tmp/ickj.pem
+chef-server-ctl org-user-add ge_ec ick
+
+knife group create read_only
+knife acl add group read_only environments prod_env read
+knife group add user smith read_only
+
+knife acl add group read_only containers environments read
+knife acl bulk add group read_only environments '.*' read
+
+knife acl remove group read_only environments prod_env update,delete
+
+    -- knife group create test_group  -- > read,update on test_env -- knife acl add group test_group environments test_env read,update
+
+   -- knife group add user alex test_group
+
+knife acl bulk remove group test_group environments '.*' read,create,update,delete,grant
+
+knife acl add group read_only databags ge_users read
+
+-------------------
+alex --> read_only for prod_env
+
+knife acl remove group users environments prod_env read 
+knife acl remove group users environments prod_env update 
+knife acl remove group users environments prod_env delete 
+
+knife acl add group read_only2 environments prod_env read
+---------------
+
+mike dough --> read_only for corpA_env
+
+knife acl remove group users environments corpa_env read 
+knife acl remove group users environments corpa_env update 
+knife acl remove group users environments corpa_env delete 
+
+knife acl add group read_only_corpa environments corpa_env read
+-----------
+ 
+ammie jockson --> read_only on both prod_env & corpA_env
+
+knife acl add group read_only_both environments prod_env read
+knife acl add group read_only_both environments corpa_env read
+------------
+Code replace::
+
+knife group create admn_cn
+knife group add user alex admn_cn
+knife acl remove group users environments ec_cn read,update,delete
+knife acl add group admin_cn environments ec_cn read,update,delete
+
+--------------------------
+
+

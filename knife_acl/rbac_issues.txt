@@ -1,0 +1,43 @@
+ISSUES:
+-----------
+
+STDERR: WARNING: Certificates from giscinchef.corporate.ge.com will be fetched and placed in your trusted_cert
+       directory (/home/vagrant/.chef/trusted_certs).
+       
+       Knife has no means to verify these are the correct certificates. You should
+       verify the authenticity of these certificates after downloading.
+       
+       ERROR: The object you are looking for could not be found
+       /opt/chef/embedded/lib/ruby/2.3.0/net/http/response.rb:331:in `stream_check': undefined method `closed?' for nil:NilClass (NoMethodError)
+       Did you mean?  clone
+       	from /opt/chef/embedded/lib/ruby/2.3.0/net/http/response.rb:200:in `read_body'
+       	from /opt/chef/embedded/lib/ruby/2.3.0/net/http/response.rb:227:in `body'
+       	from /opt/chef/embedded/lib/ruby/gems/2.3.0/gems/chef-12.15.19/lib/chef/knife.rb:523:in `rescue in format_rest_error'
+       	from /opt/chef/embedded/lib/ruby/gems/2.3.0/gems/chef-12.15.19/lib/chef/knife.rb:521:in `format_rest_error'
+       	from /opt/chef/embedded/lib/ruby/gems/2.3.0/gems/chef-12.15.19/lib/chef/knife.rb:483:in `humanize_http_exception'
+       	from /opt/chef/embedded/lib/ruby/gems/2.3.0/gems/chef-12.15.19/lib/chef/knife.rb:442:in `humanize_exception'
+       	from /opt/chef/embedded/lib/ruby/gems/2.3.0/gems/chef-12.15.19/lib/chef/knife.rb:433:in `rescue in run_with_pretty_exceptions'
+       	from /opt/chef/embedded/lib/ruby/gems/2.3.0/gems/chef-12.15.19/lib/chef/knife.rb:423:in `run_with_pretty_exceptions'
+       	from /opt/chef/embedded/lib/ruby/gems/2.3.0/gems/chef-12.15.19/lib/chef/knife.rb:219:in `run'
+       	from /opt/chef/embedded/lib/ruby/gems/2.3.0/gems/chef-12.15.19/lib/chef/application/knife.rb:156:in `run'
+       	from /opt/chef/embedded/lib/ruby/gems/2.3.0/gems/chef-12.15.19/bin/knife:25:in `<top (required)>'
+       	from /usr/bin/knife:54:in `load'
+       	from /usr/bin/knife:54:in `<main>'
+       ---- End output of knife ssl fetch ----
+       Ran knife ssl fetch returned 1; ignore_f
+
+   ------------
+
+    Mixlib::ShellOut::ShellCommandFailed
+           ------------------------------------
+           Expected process to exit with [0], but received '2'
+           ---- Begin output of /opt/chef/embedded/bin/gem install "chef-vault" -q --no-rdoc --no-ri  ----
+           STDOUT: 
+           STDERR: ERROR:  Could not find a valid gem 'chef-vault' (>= 0), here is why:
+              Unable to download data from https://rubygems.org/ - no such name (https://rubygems.org/specs.4.8.gz)
+           ---- End output of /opt/chef/embedded/bin/gem install "chef-vault" -q --no-rdoc --no-ri  ----
+           Ran /opt/chef/embedded/bin/gem install "chef-vault" -q --no-rdoc --no-ri  returned 2
+           
+  ---------------
+
+  chef_group: SSL error

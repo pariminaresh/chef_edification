@@ -1,0 +1,16 @@
+
+ -knife vault create test acl_usekey -M client
+ -knife vault create passwords root '{"username": "root", "password": "mypassword"}' -S "role:webserver" -A "alex"
+
+-knife vault update ge_acl acl_user -M client -S 'chef_environment:_default' -A mike
+
+- knife vault update bm_secrets ec_jp -M client '{"id": "ec_jp","jp_key": "jp_value111"}'
+
+knife vault update ge_acl acl_user -S 'chef_environment:apm_svcops' -M client
+
+knife vault show bm_secrets ec_jp -F json
+{
+  "id": "ec_jp",
+  "jp_key": "jp_value111"
+}
+

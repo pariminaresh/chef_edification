@@ -1,0 +1,3 @@
+
+ - run inspec standalone: chef exec rspec
+     -->kitchen verify vault-test-ubuntu-1404
